@@ -32,7 +32,7 @@ const base = {
         contentBase: path.resolve(__dirname, 'build'),
         host: '0.0.0.0',
         compress: true,
-        port: process.env.PORT || 8601,
+        port: process.env.PORT || 3000,
         historyApiFallback: {
             rewrites: [
                 { from: /^\/\d+\/?$/, to: '/index.html' },
@@ -44,6 +44,14 @@ const base = {
             ]
         }
     },
+    watchOptions: {
+        ignored: [
+            '**/DumpStack.log*',
+            '**/pagefile.sys',
+            '**/hiberfil.sys',
+            '**/swapfile.sys'
+        ]
+    },
     output: {
         library: 'GUI',
         filename: process.env.NODE_ENV === 'production' ? 'js/[name].[contenthash].js' : 'js/[name].js',
@@ -52,10 +60,20 @@ const base = {
     },
     resolve: {
         symlinks: true,
+        modules: [
+            path.resolve(__dirname, 'node_modules'),
+            'node_modules'
+        ],
         alias: {
             'text-encoding$': path.resolve(__dirname, 'src/lib/tw-text-encoder'),
             'scratch-render-fonts$': path.resolve(__dirname, 'src/lib/tw-scratch-render-fonts')
         }
+    },
+    resolveLoader: {
+        modules: [
+            path.resolve(__dirname, 'node_modules'),
+            'node_modules'
+        ]
     },
     node: { fs: 'empty' },
     module: {
@@ -64,6 +82,7 @@ const base = {
                 test: /\.jsx?$/,
                 include: [
                     path.resolve(__dirname, 'src'),
+                    path.resolve(__dirname, '../PenguinMod-Vm/src'),
                     /node_modules[\\/]scratch-[^\\/]+[\\/]src/,
                     /node_modules[\\/]pify/,
                     /node_modules[\\/]@vernier[\\/]godirect/
