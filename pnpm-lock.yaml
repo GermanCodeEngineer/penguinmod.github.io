@@ -201,8 +201,8 @@ importers:
         specifier: github:PenguinMod/penguinmod-svg-renderer#develop
         version: '@turbowarp/scratch-svg-renderer@https://codeload.github.com/PenguinMod/penguinmod-svg-renderer/tar.gz/62a2be1e440ff6993cf5a5f5fac6f8ac60423bfb(scratch-render-fonts@https://codeload.github.com/PenguinMod/penguinmod-render-fonts/tar.gz/4dda62c707f64505266aa62f7a6cc84f0e5812fd)'
       scratch-vm:
-        specifier: github:PenguinMod/PenguinMod-Vm#develop
-        version: https://codeload.github.com/PenguinMod/PenguinMod-Vm/tar.gz/ebee2b9f8a5e67f3d7cf5031b0dd8dc82a9d0bdf(@turbowarp/scratch-svg-renderer@https://codeload.github.com/PenguinMod/penguinmod-svg-renderer/tar.gz/62a2be1e440ff6993cf5a5f5fac6f8ac60423bfb(scratch-render-fonts@https://codeload.github.com/PenguinMod/penguinmod-render-fonts/tar.gz/4dda62c707f64505266aa62f7a6cc84f0e5812fd))(webpack@4.46.0)
+        specifier: file:../PenguinMod-Vm
+        version: file:../PenguinMod-Vm(@turbowarp/scratch-svg-renderer@https://codeload.github.com/PenguinMod/penguinmod-svg-renderer/tar.gz/62a2be1e440ff6993cf5a5f5fac6f8ac60423bfb(scratch-render-fonts@https://codeload.github.com/PenguinMod/penguinmod-render-fonts/tar.gz/4dda62c707f64505266aa62f7a6cc84f0e5812fd))(webpack@4.46.0)
       startaudiocontext:
         specifier: 1.2.1
         version: 1.2.1
@@ -5623,9 +5623,8 @@ packages:
   scratch-translate-extension-languages@0.0.20191118205314:
     resolution: {integrity: sha512-r0lvpgQjPMjbhI2wROrgoXzBhCvWJdkbAqJMfl2CdNqrwBpUXqLvNNtI3VtNLPJAcp9VfxEylkU9lVZ0gvU46Q==}
 
-  scratch-vm@https://codeload.github.com/PenguinMod/PenguinMod-Vm/tar.gz/ebee2b9f8a5e67f3d7cf5031b0dd8dc82a9d0bdf:
-    resolution: {tarball: https://codeload.github.com/PenguinMod/PenguinMod-Vm/tar.gz/ebee2b9f8a5e67f3d7cf5031b0dd8dc82a9d0bdf}
-    version: 0.2.0
+  scratch-vm@file:../PenguinMod-Vm:
+    resolution: {directory: ../PenguinMod-Vm, type: directory}
     peerDependencies:
       scratch-svg-renderer: github:PenguinMod/penguinmod-svg-renderer#develop
 
@@ -13313,7 +13312,7 @@ snapshots:
 
   scratch-translate-extension-languages@0.0.20191118205314: {}
 
-  scratch-vm@https://codeload.github.com/PenguinMod/PenguinMod-Vm/tar.gz/ebee2b9f8a5e67f3d7cf5031b0dd8dc82a9d0bdf(@turbowarp/scratch-svg-renderer@https://codeload.github.com/PenguinMod/penguinmod-svg-renderer/tar.gz/62a2be1e440ff6993cf5a5f5fac6f8ac60423bfb(scratch-render-fonts@https://codeload.github.com/PenguinMod/penguinmod-render-fonts/tar.gz/4dda62c707f64505266aa62f7a6cc84f0e5812fd))(webpack@4.46.0):
+  scratch-vm@file:../PenguinMod-Vm(@turbowarp/scratch-svg-renderer@https://codeload.github.com/PenguinMod/penguinmod-svg-renderer/tar.gz/62a2be1e440ff6993cf5a5f5fac6f8ac60423bfb(scratch-render-fonts@https://codeload.github.com/PenguinMod/penguinmod-render-fonts/tar.gz/4dda62c707f64505266aa62f7a6cc84f0e5812fd))(webpack@4.46.0):
     dependencies:
       '@turbowarp/json': 0.1.2
       '@vernier/godirect': 1.5.0

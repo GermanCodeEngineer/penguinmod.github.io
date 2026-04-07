@@ -1,5 +1,10 @@
 {
     "yaml.schemas": {
         "https://gitpod.io/schemas/gitpod-schema.json": "file:///workspace/penguinmod.github.io/.gitpod.yml"
+    },
+    "files.trimTrailingWhitespace": false,
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "never"
     }
 }
